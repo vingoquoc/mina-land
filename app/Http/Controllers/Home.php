@@ -9,6 +9,6 @@ class Home extends Controller
 {
     public function show()
     {
-        return View::make('home',['title'=>'Mina Land']);
+        return View::make('home',['title'=>'Pavilion Square']);
     }
 }

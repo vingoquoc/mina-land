@@ -3,154 +3,124 @@
 
 <body class="portfolio-details-page">
 
-  <header id="header" class="header sticky-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
-    <div class="branding d-flex align-items-cente">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">BizLand</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-
-    </div>
-
-  </header>
+@include('head.header')
 
   <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="{{asset('/img/portfolio/app-1.jpg')}}" alt="">
+    <div id="page-title-bar" class="page-title-bar hero section">
+      <div class="container " >
+          <div class="wrap w-100 d-flex align-items-center" style="min-height: 543px; padding-top: 123px;">
+            <div class="page-title-bar-inner d-flex flex-column align-items-center w-100" id="hero">
+                <div class="page-header">
+                <h1><span>Pavilion Square</span></h1>
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="{{asset('/img/portfolio/product-1.jpg')}}" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="{{asset('/img/portfolio/branding-1.jpg')}}" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="{{asset('/img/portfolio/books-1.jpg')}}" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+                <div class="breadcrumb">
+                  <a class="breadcrumb-projects" href="#"><p>visit website</p><span class="breadcrumb-icon"><i class="opal-icon-arrow-right" aria-hidden="true"></i></span></a>
+                </div>  
             </div>
           </div>
+      </div>
+    </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+    <div id="header" class="header sticky-top">
+      <ul class="single-portfolio-menu  d-flex justify-content-center" style="top: 0px;">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#plans">Plans</a>
+          </li><li><a href="#location">Location</a>
+        </ul>
+    </div>
+
+    <div class="container">
+      <div class="overview-style-">
+        <div id="overview" class="w-100">
+            <h1 class="single-portfolio-summary-meta-title"><span> Overview </span></h1>
+        </div>
+        <div class="single-portfolio-summary-meta row w-100">
+            <div class="col-xl-9 col-12">
+              <div class="row">
+                  <div class="col-xl-6 col-12 pt-3">
+                    <img width="587" height="1000" src="{{asset('/img/pavi-project.png')}}" alt="">
+                    <noscript><img width="587" height="1000" src="https://www.ethansee.com/wp-content/uploads/2020/02/agile-embassy-garden-1.jpg" class="attachment-rehomes-gallery-image size-rehomes-gallery-image wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.ethansee.com/wp-content/uploads/2020/02/agile-embassy-garden-1.jpg 587w, https://www.ethansee.com/wp-content/uploads/2020/02/agile-embassy-garden-1-176x300.jpg 176w" sizes="(max-width: 587px) 100vw, 587px" /></noscript>
+                  </div>
+                  <div class="col-xl-6 col-12">
+                    <div class="px-xl-3">
+                        <h3>LIVING GREEN, GRAND AND GLOBAL IN KUALA LUMPUR’S MOST PRESTIGIOUS ADDRESS</h3>
+                        <p>The striking stature of Agile Embassy Garden is oriented intentionally to offer residents spectacularly unblocked views of Kuala Lumpur city. Fortune Global 500 corporations and foreign embassies in the immediate surroundings elevate the stately ambience to sophisticated heights.</p>
+                        <p>A world of effortless convenience is at your doorstep where world-class amenities such as education institutions, medical facilities, shopping malls and offices ensure residents experience connectivity without compromise in the heart of the capital city. Where walking distance to the MRT station ensures the daily commute is a hassle-free journey that connects you to the rest of the city and beyond.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-12">
+              <ul class="single-portfolio-summary-meta-list">
+                  <li><span class="meta-title">Developer </span><span class="meta-value">Armani Hartajaya Sdn Bhd</span></li>
+                  <li><span class="meta-title">Location </span><span class="meta-value">Lot 297, Jalan Raja Chulan</span></li>
+                  <li><span class="meta-title"> </span><span class="meta-value">50200 Kuala Lumpur</span></li>
+                  <li><span class="meta-title">Total Acreage </span><span class="meta-value">2.023 acres</span></li>
+                  <li><span class="meta-title">Title Tenure</span><span class="meta-value">Leasehold 租赁地契</span></li>
+                  <li><span class="meta-title">Development Component</span><span class="meta-value">Luxury Residences:67-storey, 960 units Corporate Suites + 6 Retail lots 25-storey, 106 unitss</span></li>
+                  <li><span class="meta-title"></span><span class="meta-value"></span></li>
+                  <!-- <li><span class="meta-title">Flat Size</span><span class="meta-value"></span></li>
+                  <li><span class="meta-title">Price Range </span><span class="meta-value">$900k - $1mil</span></li> -->
               </ul>
             </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-            </div>
-          </div>
-
         </div>
-
       </div>
+     </div>
 
-    </section><!-- /Portfolio Details Section -->
+<section id="gallery" class="portfolio-details section">
+   <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div id="gallery" class="w-100">
+         <h3 class="single-portfolio-summary-meta-title">Gallery</h3>
+      </div>
+      <div class="row gy-4">
+         <div class="col-lg-12">
+            <div class="portfolio-details-slider swiper init-swiper">
+               <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    }
+                  }
+               </script>
+               <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                     <img src="{{asset('/img/portfolio/pavi-level1.png')}}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="{{asset('/img/portfolio/pavi-level2.png')}}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="{{asset('/img/portfolio/pavi-level3.png')}}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="{{asset('/img/portfolio/pavi-level4.png')}}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="{{asset('/img/portfolio/pavi-level6.png')}}" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="{{asset('/img/portfolio/pavi-level5.png')}}" alt="">
+                  </div>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+    
 
   </main>
 

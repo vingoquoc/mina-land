@@ -848,6 +848,17 @@ section,
   background-size: cover;
 }
 
+.heropro {
+  width: 100%;
+  min-height: 75vh;
+  position: relative;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  background: url("../img/pavilion.jpg") top left;
+  background-size: cover;
+}
+
 .hero:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 30%);
